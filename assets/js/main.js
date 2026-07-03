@@ -13,7 +13,12 @@ $(document).ready(function(){
         $("#navIcon").html('<i class="fa-solid fa-xmark"></i>');
     });
 
+    var preloaderTimeout = setTimeout(function(){
+        $("#preLoader").fadeOut();
+    }, 800);
+
     $(window).on("load",function(){
+        clearTimeout(preloaderTimeout);
         $("#preLoader").fadeOut();
     });
 
